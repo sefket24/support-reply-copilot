@@ -283,6 +283,37 @@ h1,h2,h3,h4 { font-family: 'DM Mono', monospace; }
     border: none; border-top: 1px solid #222;
     margin: 1rem 0;
 }
+
+/* ── Portfolio banner ── */
+.portfolio-banner {
+    background: #131a13;
+    border: 1px solid #2d4a2d;
+    border-left: 3px solid #4ade80;
+    border-radius: 8px;
+    padding: 0.8rem 1.25rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.portfolio-banner-text {
+    font-size: 0.83rem;
+    color: #888;
+    line-height: 1.55;
+}
+.portfolio-banner-text strong { color: #c8c6c0; font-weight: 600; }
+.portfolio-links { display: flex; gap: 0.5rem; white-space: nowrap; }
+.portfolio-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; font-weight: 500;
+    padding: 4px 10px; border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #2a2a28;
+    color: #666; background: #1a1a18;
+    transition: all 0.15s;
+}
+.portfolio-link:hover { background: #1f2d1f; color: #4ade80; border-color: #2d4a2d; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -295,6 +326,22 @@ st.markdown("""
         <span class="topbar-tag">Internal Tool</span>
     </div>
     <div class="topbar-right">Support Ops · Decision Engine v1.0</div>
+</div>
+""", unsafe_allow_html=True)
+
+# ── Portfolio banner ─────────────────────────────────────────────────────────
+st.markdown("""
+<div class="portfolio-banner">
+    <div class="portfolio-banner-text">
+        👋 <strong>Hey, hiring team!</strong> This is a portfolio project by <strong>Sef Nouri</strong> —
+        a working AI tool that simulates how support teams can reduce escalations and improve reply quality
+        using LLM-based ticket analysis. It detects sentiment, classifies complexity, recommends deflect vs. escalate,
+        and drafts a suggested reply — all before the agent starts typing. Feel free to test it with a real ticket.
+    </div>
+    <div class="portfolio-links">
+        <a class="portfolio-link" href="https://github.com/sefket24/support-reply-copilot" target="_blank">⌥ GitHub</a>
+        <a class="portfolio-link" href="https://www.linkedin.com/in/sefketnouri" target="_blank">in LinkedIn</a>
+    </div>
 </div>
 """, unsafe_allow_html=True)
 
